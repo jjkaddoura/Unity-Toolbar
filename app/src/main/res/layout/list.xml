@@ -10,5 +10,7 @@
     app:layoutManager="LinearLayoutManager"
     tools:context="edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar.NotesActivity"
     tools:listitem="@layout/list_content"
+    android:background="@color/blue1"
+
 
     />

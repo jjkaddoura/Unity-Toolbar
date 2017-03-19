@@ -8,12 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/blue1"
     tools:context="edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar.NotesView">
 
     <Button
         android:id="@+id/viewBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/blue3"
         android:layout_alignParentLeft="true"
         android:text="BACK"
         />
@@ -23,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:background="@color/blue3"
         android:text="Edit"
         />
 
@@ -31,13 +34,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:background="@color/blue3"
         android:text="Remove"
         />
 
     <TextView
         android:id="@+id/viewTitle"
-        android:layout_below="@id/viewBackButton"
+        android:padding="25dp"
         android:layout_centerHorizontal="true"
+        android:layout_below="@id/viewBackButton"
         android:layout_width="wrap_content"
         android:textSize="40sp"
         android:hint="title"
@@ -45,6 +50,7 @@
 
     <TextView
         android:id="@+id/viewContent"
+        android:padding="25dp"
         android:layout_below="@id/viewTitle"
         android:layout_centerHorizontal="true"
         android:textSize="25sp"

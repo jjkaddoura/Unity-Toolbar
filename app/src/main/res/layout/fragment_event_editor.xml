@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/blue1"
     tools:context="edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar.event_editor">
     <DatePicker
         android:layout_width="match_parent"
@@ -27,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/save"
+            android:background="@color/blue3"
             android:id="@+id/saveButton"/>
         <Space
             android:layout_width="wrap_content"
@@ -36,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancel"
+            android:background="@color/blue3"
             android:id="@+id/cancelButton"/>
     </LinearLayout>
 </LinearLayout>

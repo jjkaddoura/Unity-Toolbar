@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/blue1"
+
     tools:context="edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar.CalendarFragment">
         <CalendarView
             android:layout_width="match_parent"

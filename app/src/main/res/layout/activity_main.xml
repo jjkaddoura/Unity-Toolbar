@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/blue1"
     tools:context="edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar.MainActivity">
 
     <ImageButton
@@ -46,9 +47,13 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         app:fabSize="mini"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:layout_marginBottom="12dp"
+        android:background="@color/blue1"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

@@ -7,4 +7,9 @@
     <color name="Gray">#ff888888</color>
     <color name="mine">#F1F1</color>
     <color name="black_overlay">#66000000</color>
+
+    <color name="White">#FFFFFF</color>
+    <color name="blue1">#c8daf7</color>
+    <color name="blue2">#87b0f2</color>
+    <color name="blue3">#5c95f2</color>
 </resources>

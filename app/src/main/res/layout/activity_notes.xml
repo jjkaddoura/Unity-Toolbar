@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/blue1"
     tools:context="edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar.NotesActivity">
 
     <android.support.design.widget.FloatingActionButton
@@ -13,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        android:background="@color/blue1"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
 
     <FrameLayout
         android:id="@+id/frameLayout"

@@ -25,6 +25,7 @@
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".NotesView" />
         <activity android:name=".NotesActivity" />
+        <activity android:name=".EditNote"></activity>
     </application>
 
 </manifest>

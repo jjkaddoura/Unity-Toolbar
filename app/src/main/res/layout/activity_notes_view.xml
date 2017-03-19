@@ -12,11 +12,26 @@
 
     <Button
         android:id="@+id/viewBackButton"
-        android:layout_below="@id/my_toolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:text="BACK"
+        />
+
+    <Button
+        android:id="@+id/viewEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Edit"
+        />
+
+    <Button
+        android:id="@+id/viewRemoveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Remove"
         />
 
     <TextView

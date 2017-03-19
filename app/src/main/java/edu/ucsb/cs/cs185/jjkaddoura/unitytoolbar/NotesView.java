@@ -32,16 +32,44 @@ public class NotesView extends AppCompatActivity {
         TextView titleText = (TextView) findViewById(R.id.viewTitle);
         TextView contentText = (TextView) findViewById(R.id.viewContent);
 
+        final String titleString = n.title;
+        final String contentString = n.description;
         titleText.setText(n.title);
         contentText.setText(n.description);
 
+        final int remPos = findPos;
+        Button removeButton = (Button) findViewById(R.id.viewRemoveButton);
+        removeButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                NotesActivity.n.ITEMS.remove(remPos);
+                Context context = v.getContext();
+                Intent intent = new Intent(context, NotesActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        Button editButton = (Button) findViewById(R.id.viewEditButton);
+        editButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+
+                Context context = v.getContext();
+                Intent intent = new Intent(context, EditNote.class);
+                intent.putExtra("oldTitle", titleString);
+                intent.putExtra("oldContent", contentString);
+                intent.putExtra("position", remPos);
+                context.startActivity(intent);
+            }
+        });
+
+
         Button back = (Button) findViewById(R.id.viewBackButton);
-        back.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v){
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 // Perform action on click
                 Context context = v.getContext();
-                Intent intent = new Intent(context, MainActivity.class);
+                Intent intent = new Intent(context, NotesActivity.class);
                 context.startActivity(intent);
             }
         });

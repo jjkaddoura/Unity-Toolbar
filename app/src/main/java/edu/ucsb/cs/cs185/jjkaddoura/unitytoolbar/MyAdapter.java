@@ -73,7 +73,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.mIdView.setText(mDataset.get(position).title);
 
         final String s = holder.mIdView.getText().toString();
-        System.out.println("S is " + s);
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){

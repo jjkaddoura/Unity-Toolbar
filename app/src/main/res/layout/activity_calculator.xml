@@ -9,37 +9,42 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:orientation="vertical"
-        android:weightSum="8"
+        android:weightSum="10"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_bright"
-            android:gravity="bottom"
+            android:layout_gravity="right|center"
+            android:layout_weight="2.61"
+            android:background="@android:color/holo_purple"
+            android:gravity="fill_vertical"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="91dp"
-                android:layout_weight="1"
-                android:gravity="top|right"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@android:color/holo_purple"
+                android:gravity="right"
                 android:paddingRight="30dp"
                 android:text="0"
                 android:textColor="@android:color/background_light"
-                android:textSize="50sp" />
+                android:textSize="100sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.5"
+            android:gravity="fill_vertical"
             android:orientation="horizontal">
 
             <Button
@@ -81,7 +86,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.5"
+            android:gravity="fill_vertical"
             android:orientation="horizontal">
 
             <Button
@@ -89,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="7"
                 android:textSize="24sp" />
 
@@ -98,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="8"
                 android:textSize="24sp" />
 
@@ -107,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="9"
                 android:textSize="24sp" />
 
@@ -123,6 +130,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.5"
+            android:gravity="fill_vertical"
             android:orientation="horizontal">
 
             <Button
@@ -130,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="4"
                 android:textSize="24sp" />
 
@@ -139,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="5"
                 android:textSize="24sp" />
 
@@ -148,13 +158,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="6"
                 android:textSize="24sp" />
 
             <ImageButton
                 android:id="@+id/btnMinus"
-                android:layout_width="wrap_content"
+                android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:backgroundTint="@android:color/holo_blue_dark"
                 app:srcCompat="@drawable/minusss" />
@@ -164,7 +174,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.5"
+            android:gravity="bottom"
             android:orientation="horizontal">
 
             <Button
@@ -172,7 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="1"
                 android:textSize="24sp" />
 
@@ -181,7 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="2"
                 android:textSize="24sp" />
 
@@ -190,7 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="3"
                 android:textSize="24sp" />
 
@@ -206,24 +218,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_gravity="bottom"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/btn0"
-                android:layout_width="wrap_content"
+                android:layout_width="349dp"
                 android:layout_height="match_parent"
-                android:layout_weight="9.62"
-                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="0"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnDecimal"
-                android:layout_width="wrap_content"
+                android:layout_width="173dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_purple"
+                android:layout_weight="0.78"
+                android:backgroundTint="@android:color/holo_blue_bright"
                 android:text="."
                 android:textSize="24sp" />
 

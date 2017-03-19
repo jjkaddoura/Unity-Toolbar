@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UnityToolbar</string>
+    <string name="minDate">01/01/2000</string>
+    <string name="maxDate">12/31/2028</string>
+    <string name="todo"> Events</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="EventDesc">Event Description</string>
+    <string name="title_activity_notes_page">NotesPage</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

@@ -1,6 +1,7 @@
 package edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,19 +22,33 @@ public class CalculatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculator);
+        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+            setContentView(R.layout.activity_calculator);
+        else
+            setContentView(R.layout.activity_calculator_2);
 
         btnMinus = (ImageButton) findViewById(R.id.btnMinus);
         btnPlus = (ImageButton) findViewById(R.id.btnPlus);
         btnTimes = (ImageButton) findViewById(R.id.btnTimes);
 
         btnZero = (Button) findViewById(R.id.btn0);
-        btnOne = (Button) findViewById(R.id.btn0);
-        btnTwo = (Button) findViewById(R.id.btn0);
-        btnThree = (Button) findViewById(R.id.btn0);
-        btnFour = (Button) findViewById(R.id.btn0);
+        btnOne = (Button) findViewById(R.id.btn1);
+        btnTwo = (Button) findViewById(R.id.btn2);
+        btnThree = (Button) findViewById(R.id.btn3);
+        btnFour = (Button) findViewById(R.id.btn4);
+        btnFive = (Button) findViewById(R.id.btn5);
+        btnSix = (Button) findViewById(R.id.btn6);
+        btnSeven = (Button) findViewById(R.id.btn7);
+        btnEight = (Button) findViewById(R.id.btn8);
+        btnNine = (Button) findViewById(R.id.btn9);
 
 
+        btnZero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
 
 

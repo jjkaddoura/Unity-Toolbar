@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right|center"
             android:layout_weight="2.61"
-            android:background="@android:color/holo_purple"
+            android:background="@android:color/black"
             android:gravity="fill_vertical"
             android:orientation="horizontal">
 
@@ -75,7 +75,7 @@
                 android:textSize="24sp" />
 
             <ImageButton
-                android:id="@+id/btnPercent"
+                android:id="@+id/btnDiv"
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:backgroundTint="@android:color/holo_blue_dark"

@@ -16,10 +16,10 @@
         app:srcCompat="@drawable/calculator"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="43dp"
+        android:layout_marginTop="81dp"
         android:layout_below="@+id/btnCalendar"
         android:layout_alignLeft="@+id/btnCalendar"
-        android:layout_alignStart="@+id/btnCalendar"
-        android:layout_marginTop="56dp" />
+        android:layout_alignStart="@+id/btnCalendar" />
     <ImageButton
         android:id="@+id/btnCalendar"
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/calender"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="43dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="78dp"
         android:layout_below="@+id/btnNotes"
         android:layout_centerHorizontal="true" />
 
@@ -42,7 +42,7 @@
         android:layout_alignStart="@+id/btnCalendar" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -54,5 +54,17 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="36dp"
         android:layout_marginStart="36dp" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnAdd"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Delete" />
 
 </RelativeLayout>

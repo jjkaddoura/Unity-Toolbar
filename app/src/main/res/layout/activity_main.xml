@@ -10,6 +10,18 @@
     tools:context="edu.ucsb.cs.cs185.jjkaddoura.unitytoolbar.MainActivity">
 
     <ImageButton
+        android:id="@+id/btnExtra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="43dp"
+        android:layout_marginTop="250dp"
+        android:layout_below="@+id/btnCalendar"
+        android:layout_alignLeft="@+id/btnCalendar"
+        android:layout_alignStart="@+id/btnCalendar"
+        android:visibility="invisible"/>
+    <ImageButton
         android:id="@+id/btnCalc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

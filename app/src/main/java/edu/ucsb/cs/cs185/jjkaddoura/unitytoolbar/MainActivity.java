@@ -15,9 +15,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int ADD_APP = 1234;
     ImageButton btnCalc;
     ImageButton btnCalendar;
     ImageButton btnNotes;
+    ImageButton btnExtra;
     Button btnDelete;
     FloatingActionButton btnAdd;
     boolean isDeleting = false;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btnCalc = (ImageButton) findViewById(R.id.btnCalc);
         btnCalendar = (ImageButton) findViewById(R.id.btnCalendar);
         btnNotes = (ImageButton) findViewById(R.id.btnNotes);
+        btnExtra = (ImageButton) findViewById(R.id.btnExtra);
         btnAdd = (FloatingActionButton) findViewById(R.id.btnAdd);
         btnDelete = (Button) findViewById(R.id.btnDelete);
 
@@ -82,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                 toast.setGravity(Gravity.TOP,0,0);
                 isDeleting = false;
                 toast.show();
+                Intent intent = new Intent(getApplicationContext(), AddActivity.class);
+                startActivityForResult(intent, ADD_APP);
             }
         });
 
@@ -95,5 +100,25 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+        btnExtra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnExtra.setVisibility(View.INVISIBLE);
+                isDeleting = false;
+            }
+        });
+    }
+
+    protected void onActivityResult(int ReqeustCode, int resultCode, Intent intent){
+        super.onActivityResult(ReqeustCode, resultCode, intent);
+        if(ReqeustCode == ADD_APP){
+            if(resultCode == RESULT_OK) {
+                int position = intent.getIntExtra("pos", -10);
+                if(position >= 0) {
+                    btnExtra.setImageResource(appAdapter.apps.get(position).imageId);
+                    btnExtra.setVisibility(View.VISIBLE);
+                }
+            }
+        }
     }
 }

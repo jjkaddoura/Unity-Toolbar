@@ -27,12 +27,13 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textViewTotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:backgroundTint="@android:color/holo_purple"
                 android:gravity="right"
+                android:maxLength="10"
                 android:paddingRight="30dp"
                 android:text="0"
                 android:textColor="@android:color/background_light"

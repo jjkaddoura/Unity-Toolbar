@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/calender"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="43dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="56dp"
         android:layout_below="@+id/btnNotes"
         android:layout_centerHorizontal="true" />
 
@@ -48,12 +48,11 @@
         android:clickable="true"
         app:fabSize="mini"
         android:background="@color/blue1"
-        app:srcCompat="@drawable/ic_add_black_24dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ic_add_black_24dp" android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp" />
 
 </RelativeLayout>

@@ -199,8 +199,13 @@ public class CalculatorActivity extends AppCompatActivity {
 
                         break;
                     case MotionEvent.ACTION_UP:
-                        if(num != 0 && isNoop()) {
-                            current += "0";
+                        if(num != 0 && !eq && isNoop()) {
+                            if(!current.equals("0")) current += "0";
+                            num = Integer.parseInt(current);
+                        }
+                        else if(!isNoop() && num != 0 ){
+                            if(current.length() < 1 && eq) current = "0";
+                            else current += "0";
                             num = Integer.parseInt(current);
                         }
 

@@ -25,6 +25,7 @@ public class CalculatorActivity extends AppCompatActivity {
     ImageButton btnPlus;
     ImageButton btnTimes;
     ImageButton btnDiv;
+    Button btnBanger;
     Button btnZero, btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine;
     Button btnClear;
     TextView total;
@@ -571,8 +572,38 @@ public class CalculatorActivity extends AppCompatActivity {
             }
         });
 
+        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            btnBanger = (Button) findViewById(R.id.btnBanger);
+            btnBanger.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View view, MotionEvent motionEvent) {
+                    switch (motionEvent.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            if(num != 0){
+                                for(int i = num-1; i > 0; i--){
+                                    num *= i;
+                                }
+                            }
+                            current = Integer.toString(num);
+                            total.setText(current);
+                            break;
+
+                        case MotionEvent.ACTION_CANCEL: {
+
+                            break;
+                        }
+                    }
+                    return true;
+                }
+            });
+        }
+
 
     }
+
 
     public boolean isNoop(){
         if(divOp || minusOp || plusOp || timesOp)

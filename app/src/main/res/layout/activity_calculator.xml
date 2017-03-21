@@ -33,7 +33,6 @@
                 android:layout_gravity="bottom"
                 android:backgroundTint="@android:color/holo_purple"
                 android:gravity="right"
-                android:maxLength="10"
                 android:paddingRight="30dp"
                 android:text="0"
                 android:textColor="@android:color/background_light"

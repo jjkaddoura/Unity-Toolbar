@@ -408,21 +408,20 @@ public class CalculatorActivity extends AppCompatActivity {
                         if(num != 0 && !eq && isNoop()) {
                             current += "6";
                             num = Integer.parseInt(current);
-                            total.setText(current);
+
                         }
                         else if((num == 0 || eq) && isNoop()) {
                             btnClear.setText("C");
                             num = 6;
                             current = "6";
                             eq = false;
-                            total.setText(current);
                         }
                         else if(!isNoop()){
                             if(current.length() < 1) current = "6";
                             else current += "6";
                         }
+                        total.setText(current);
                         break;
-
                     case MotionEvent.ACTION_CANCEL: {
 
                         break;

@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toast = new Toast(getApplicationContext()).makeText(getApplicationContext(),
-                        "Please select an application to add to toolbar.", Toast.LENGTH_LONG);
+                        "Select an application to add to Unity Toolbar.", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.TOP,0,0);
                 isDeleting = false;
                 toast.show();
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toast = new Toast(getApplicationContext()).makeText(getApplicationContext(),
-                        "Please select one of your toolbar applications to delete", Toast.LENGTH_LONG);
+                        "Select an application to delete.", Toast.LENGTH_LONG);
                 isDeleting = true;
                 toast.setGravity(Gravity.TOP,0,0);
                 toast.show();

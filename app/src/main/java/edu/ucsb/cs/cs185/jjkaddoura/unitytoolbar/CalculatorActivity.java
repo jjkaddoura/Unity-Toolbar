@@ -25,6 +25,7 @@ public class CalculatorActivity extends AppCompatActivity {
     ImageButton btnPlus;
     ImageButton btnTimes;
     ImageButton btnDiv;
+    Button btnBanger;
     Button btnZero, btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine;
     Button btnClear;
     TextView total;
@@ -198,8 +199,13 @@ public class CalculatorActivity extends AppCompatActivity {
 
                         break;
                     case MotionEvent.ACTION_UP:
-                        if(num != 0 && isNoop()) {
-                            current += "0";
+                        if(num != 0 && !eq && isNoop()) {
+                            if(!current.equals("0")) current += "0";
+                            num = Integer.parseInt(current);
+                        }
+                        else if(!isNoop() && num != 0 ){
+                            if(current.length() < 1 && eq) current = "0";
+                            else current += "0";
                             num = Integer.parseInt(current);
                         }
 
@@ -407,21 +413,20 @@ public class CalculatorActivity extends AppCompatActivity {
                         if(num != 0 && !eq && isNoop()) {
                             current += "6";
                             num = Integer.parseInt(current);
-                            total.setText(current);
+
                         }
                         else if((num == 0 || eq) && isNoop()) {
                             btnClear.setText("C");
                             num = 6;
                             current = "6";
                             eq = false;
-                            total.setText(current);
                         }
                         else if(!isNoop()){
                             if(current.length() < 1) current = "6";
                             else current += "6";
                         }
+                        total.setText(current);
                         break;
-
                     case MotionEvent.ACTION_CANCEL: {
 
                         break;
@@ -571,8 +576,38 @@ public class CalculatorActivity extends AppCompatActivity {
             }
         });
 
+        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            btnBanger = (Button) findViewById(R.id.btnBanger);
+            btnBanger.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View view, MotionEvent motionEvent) {
+                    switch (motionEvent.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            if(num != 0){
+                                for(int i = num-1; i > 0; i--){
+                                    num *= i;
+                                }
+                            }
+                            current = Integer.toString(num);
+                            total.setText(current);
+                            break;
+
+                        case MotionEvent.ACTION_CANCEL: {
+
+                            break;
+                        }
+                    }
+                    return true;
+                }
+            });
+        }
+
 
     }
+
 
     public boolean isNoop(){
         if(divOp || minusOp || plusOp || timesOp)
